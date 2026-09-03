@@ -1,337 +1,537 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-lang="es" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Luis Madriz - Estudiante de ATI en el TEC, especializado en Big Data, Cloud y Machine Learning">
-    <title>Luis Madriz | Estudiante de ATI</title>
+    <meta name="color-scheme" content="dark light">
+    <title>Luis Madriz — Administración de Tecnologías de Información</title>
+    <meta name="description" content="Luis Steven Madriz Campos — estudiante avanzado de Administración de Tecnologías de Información (TEC). El puente entre las necesidades del negocio y las soluciones tecnológicas: gestión de proyectos, análisis de negocio, datos e IA.">
+    <meta name="author" content="Luis Steven Madriz Campos">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Luis Madriz — Administración de Tecnologías de Información">
+    <meta property="og:description" content="El puente entre las necesidades del negocio y las soluciones tecnológicas. Gestión de proyectos, análisis de negocio, datos e IA.">
+    <meta property="og:image" content="https://mochi00001.github.io/personal-website/luis-madriz.jpeg">
+    <meta property="og:url" content="https://mochi00001.github.io/personal-website/">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="canonical" href="https://mochi00001.github.io/personal-website/">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%232563eb'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='54' font-weight='700' fill='white' text-anchor='middle'%3ELM%3C/text%3E%3C/svg%3E">
+
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Luis Steven Madriz Campos",
+      "givenName": "Luis Steven",
+      "familyName": "Madriz Campos",
+      "url": "https://mochi00001.github.io/personal-website/",
+      "image": "https://mochi00001.github.io/personal-website/luis-madriz.jpeg",
+      "jobTitle": "Estudiante de Administración de Tecnologías de Información",
+      "email": "mailto:luismadriz9@gmail.com",
+      "telephone": "+50689655235",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cartago",
+        "addressCountry": "CR"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Instituto Tecnológico de Costa Rica"
+      },
+      "knowsLanguage": ["es", "en"],
+      "sameAs": [
+        "https://github.com/mochi00001",
+        "https://www.linkedin.com/in/luismadriz13"
+      ]
+    }
+    </script>
 </head>
 <body>
+    <a href="#main" class="skip-link" data-i18n>
+        <span lang="es">Saltar al contenido</span><span lang="en">Skip to content</span>
+    </a>
+
     <!-- Navbar -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">LM</a>
-            <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre-mi">Sobre Mí</a></li>
-                <li><a href="#experiencia">Experiencia</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+    <nav class="navbar" aria-label="Principal">
+        <div class="container nav-inner">
+            <a href="#inicio" class="logo" aria-label="Luis Madriz — inicio">LM</a>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#sobre-mi"><span lang="es">Sobre mí</span><span lang="en">About</span></a></li>
+                <li><a href="#experiencia"><span lang="es">Experiencia</span><span lang="en">Experience</span></a></li>
+                <li><a href="#habilidades"><span lang="es">Habilidades</span><span lang="en">Skills</span></a></li>
+                <li><a href="#proyectos"><span lang="es">Proyectos</span><span lang="en">Projects</span></a></li>
+                <li><a href="#formacion"><span lang="es">Formación</span><span lang="en">Education</span></a></li>
+                <li><a href="#contacto"><span lang="es">Contacto</span><span lang="en">Contact</span></a></li>
             </ul>
-            <button class="menu-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+
+            <div class="nav-controls">
+                <button class="ctrl-btn" id="lang-toggle" type="button" aria-label="Change language / Cambiar idioma">
+                    <span aria-hidden="true" class="lang-current">ES</span>
+                </button>
+                <button class="ctrl-btn" id="theme-toggle" type="button" aria-label="Cambiar tema claro/oscuro">
+                    <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+                    <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+                <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <main id="main">
+    <!-- Hero -->
     <section id="inicio" class="hero">
-        <div class="container">
+        <div class="container hero-grid">
             <div class="hero-content">
-                <p class="hero-subtitle">¡Hola! Soy</p>
-                <h1 class="hero-title">Luis Madriz</h1>
-                <p class="hero-role">Estudiante de Administración de Tecnologías de Información</p>
+                <p class="eyebrow">
+                    <span lang="es">Luis Steven Madriz Campos</span><span lang="en">Luis Steven Madriz Campos</span>
+                </p>
+                <h1 class="hero-title">
+                    <span lang="es">El puente entre el negocio y la tecnología</span>
+                    <span lang="en">The bridge between business and technology</span>
+                </h1>
+                <p class="hero-role">
+                    <span lang="es">Estudiante avanzado de Administración de Tecnologías de Información — Tecnológico de Costa Rica</span>
+                    <span lang="en">Senior student of Information Technology Management — Costa Rica Institute of Technology</span>
+                </p>
                 <p class="hero-description">
-                    Orientado al mundo de <span class="highlight">Big Data</span>,
-                    <span class="highlight">Cloud</span> y <span class="highlight">Machine Learning</span>.
-                    Apasionado por crear soluciones tecnológicas que generen impacto.
+                    <span lang="es">Combino base técnica en sistemas de información con gestión de proyectos, análisis de negocio, datos e inteligencia artificial. Me interesa el punto donde la tecnología genera valor real para las empresas.</span>
+                    <span lang="en">I pair a technical foundation in information systems with project management, business analysis, data and artificial intelligence. I'm drawn to the point where technology creates real value for a business.</span>
                 </p>
                 <div class="hero-buttons">
-                    <a href="#contacto" class="btn btn-primary">Contactar</a>
-                    <a href="#proyectos" class="btn btn-secondary">Ver Proyectos</a>
+                    <a href="#contacto" class="btn btn-primary">
+                        <span lang="es">Contactar</span><span lang="en">Get in touch</span>
+                    </a>
+                    <a href="#proyectos" class="btn btn-secondary">
+                        <span lang="es">Ver proyectos</span><span lang="en">View projects</span>
+                    </a>
                 </div>
+                <ul class="hero-meta">
+                    <li><strong>Cartago, Costa Rica</strong> · <span lang="es">remoto o presencial</span><span lang="en">remote or on-site</span></li>
+                    <li><span lang="es">Español e inglés</span><span lang="en">Spanish and English</span></li>
+                </ul>
             </div>
             <div class="hero-image">
-                <div class="profile-placeholder">
-                    <span>Tu Foto</span>
+                <div class="photo-frame">
+                    <img src="luis-madriz.jpeg" width="640" height="637" alt="Retrato de Luis Madriz" fetchpriority="high">
+                </div>
+                <div class="photo-badge" aria-hidden="true">
+                    <span lang="es">Lic. Administración de TI · TEC</span><span lang="en">Lic. IT Management · TEC</span>
                 </div>
             </div>
         </div>
-        <div class="scroll-indicator">
-            <span>Scroll</span>
-            <div class="mouse"></div>
-        </div>
     </section>
 
-    <!-- About Section -->
-    <section id="sobre-mi" class="about">
+    <!-- About -->
+    <section id="sobre-mi" class="about section">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Sobre Mí</h2>
-                <p class="section-subtitle">Un poco de mi historia y formación</p>
-            </div>
-            <div class="about-content">
+            <header class="section-header">
+                <p class="section-kicker"><span lang="es">01 — Sobre mí</span><span lang="en">01 — About</span></p>
+                <h2 class="section-title"><span lang="es">Formación de negocio, ejecución técnica</span><span lang="en">Business thinking, technical execution</span></h2>
+            </header>
+            <div class="about-grid">
                 <div class="about-text">
-                    <p>
-                        Estudiante de <strong>Administración de Tecnologías de Información</strong>
-                        en el <strong>Tecnológico de Costa Rica</strong>, con enfoque en áreas de
-                        alta demanda como Big Data, Cloud Computing y Machine Learning.
-                    </p>
-                    <p>
-                        Poseo sólidos conocimientos en programación con <strong>Python</strong>,
-                        <strong>Java</strong> y <strong>C#</strong>, así como experiencia en el
-                        diseño e implementación de bases de datos.
-                    </p>
-                    <p>
-                        Estoy en constante búsqueda de oportunidades que me permitan aplicar mis
-                        conocimientos, adquirir experiencia práctica y contribuir al desarrollo
-                        de soluciones tecnológicas innovadoras.
-                    </p>
+                    <p lang="es">Soy estudiante avanzado de la <strong>Licenciatura en Administración de Tecnologías de Información</strong> (ATI) en el <strong>Tecnológico de Costa Rica</strong>, carrera acreditada por SINAES. El perfil ATI forma profesionales que entienden tanto el negocio como la tecnología, y ahí es donde trabajo mejor: en la frontera entre los dos.</p>
+                    <p lang="en">I'm a senior student of the <strong>Licentiate in Information Technology Management</strong> (ATI) at the <strong>Costa Rica Institute of Technology (TEC)</strong>, a SINAES-accredited program. The ATI profile trains people who understand both the business and the technology, and that's where I work best: at the border between the two.</p>
+
+                    <p lang="es">Ahora mismo llevo cursos como <strong>Administración de Procesos de Negocios</strong>, <strong>Administración de Tecnologías de Información</strong>, <strong>Adquisición de TI</strong> y <strong>Sistemas de Información Empresarial</strong>. Son los cursos donde se integra todo lo aprendido en el camino: cómo la tecnología genera valor real para las empresas hoy, no como piezas sueltas sino como un sistema.</p>
+                    <p lang="en">Right now I'm taking courses like <strong>Business Process Management</strong>, <strong>IT Management</strong>, <strong>IT Acquisition</strong> and <strong>Enterprise Information Systems</strong> — the courses where everything I've learned so far comes together: how technology creates real value for a company today, not as loose parts but as a system.</p>
+
+                    <p lang="es">El resto de mi vida —el trabajo, los proyectos propios, el deporte— se apoya en esa base y forma una integración troncal de mi perfil. Trabajo como <strong>asistente administrativo</strong>, desarrollo sitios web de forma independiente, y juego <strong>voleibol de primera división</strong> desde hace 6 años, además de ser <strong>capitán del equipo de la Universidad</strong>.</p>
+                    <p lang="en">The rest of my life — work, my own projects, sport — builds on that foundation and forms the backbone of my profile. I work as an <strong>administrative assistant</strong>, build websites independently, and have played <strong>first-division volleyball</strong> for 6 years, as well as being <strong>captain of my university team</strong>.</p>
                 </div>
-                <div class="about-info">
+                <aside class="about-info" aria-label="Datos rápidos">
                     <div class="info-item">
-                        <span class="info-label">Universidad</span>
-                        <span class="info-value">Tecnológico de Costa Rica</span>
+                        <span class="info-label"><span lang="es">Universidad</span><span lang="en">University</span></span>
+                        <span class="info-value">Tecnológico de Costa Rica (TEC)</span>
                     </div>
                     <div class="info-item">
-                        <span class="info-label">Carrera</span>
-                        <span class="info-value">Administración de TI</span>
+                        <span class="info-label"><span lang="es">Carrera</span><span lang="en">Degree</span></span>
+                        <span class="info-value"><span lang="es">Lic. Administración de TI</span><span lang="en">Lic. IT Management</span></span>
                     </div>
                     <div class="info-item">
-                        <span class="info-label">Enfoque</span>
-                        <span class="info-value">Big Data, Cloud, ML</span>
+                        <span class="info-label"><span lang="es">Graduación estimada</span><span lang="en">Estimated graduation</span></span>
+                        <span class="info-value">2027</span>
                     </div>
                     <div class="info-item">
-                        <span class="info-label">Ubicación</span>
-                        <span class="info-value">Costa Rica</span>
+                        <span class="info-label"><span lang="es">Ubicación</span><span lang="en">Location</span></span>
+                        <span class="info-value">Cartago, Costa Rica (UTC−6)</span>
                     </div>
-                </div>
+                    <div class="info-item">
+                        <span class="info-label"><span lang="es">Idiomas</span><span lang="en">Languages</span></span>
+                        <span class="info-value"><span lang="es">Español e inglés</span><span lang="en">Spanish and English</span></span>
+                    </div>
+                </aside>
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experiencia" class="experience">
+    <!-- Experience -->
+    <section id="experiencia" class="experience section">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Experiencia</h2>
-                <p class="section-subtitle">Proyectos académicos y experiencia práctica</p>
-            </div>
+            <header class="section-header">
+                <p class="section-kicker"><span lang="es">02 — Experiencia</span><span lang="en">02 — Experience</span></p>
+                <h2 class="section-title"><span lang="es">Dónde he aplicado esto</span><span lang="en">Where I've put this to work</span></h2>
+            </header>
+
             <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Desarrollo Web y Bases de Datos</h3>
-                        <span class="timeline-date">2023 - Presente</span>
-                        <p>
-                            Desarrollo de proyectos académicos aplicando conocimientos de
-                            bases de datos avanzadas, programación orientada a objetos y
-                            desarrollo web.
-                        </p>
-                        <ul class="experience-list">
-                            <li>Sistema de gestión para taller de joyería</li>
-                            <li>Sitio web corporativo para empresa de servicios</li>
-                            <li>Aplicación bancaria sin tarjeta (proyecto POO)</li>
-                        </ul>
+                <article class="timeline-item">
+                    <div class="timeline-head">
+                        <h3><span lang="es">Asistente Administrativo</span><span lang="en">Administrative Assistant</span></h3>
+                        <span class="timeline-date">
+                            <span lang="es">May 2026 — Actual</span><span lang="en">May 2026 — Present</span>
+                        </span>
                     </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Formación Académica</h3>
-                        <span class="timeline-date">2022 - Presente</span>
-                        <p>
-                            Estudiante de la carrera de Administración de Tecnologías de
-                            Información en el Tecnológico de Costa Rica.
-                        </p>
+                    <p class="timeline-org">Línea Base Constructora · Cartago · <span lang="es">Presencial</span><span lang="en">On-site</span></p>
+                    <ul class="timeline-list">
+                        <li lang="es">Gestión administrativa de oficina: recepción, clasificación y archivo de documentos físicos y digitales, y coordinación de correspondencia interna y externa.</li>
+                        <li lang="en">Office administration: intake, classification and filing of physical and digital documents, and coordination of internal and external correspondence.</li>
+                        <li lang="es">Mantenimiento y actualización de bases de datos administrativas; elaboración de informes, actas y documentos de soporte.</li>
+                        <li lang="en">Maintenance and updating of administrative databases; preparation of reports, minutes and supporting documents.</li>
+                        <li lang="es"><strong>Proyecto propio:</strong> diseño, desarrollo e implementación del sitio web corporativo <a href="https://lineabase.co.cr" target="_blank" rel="noopener">lineabase.co.cr</a> — hosting en Hostinger, control de versiones en GitHub y desarrollo asistido con IA.</li>
+                        <li lang="en"><strong>Own initiative:</strong> designed, built and deployed the company website <a href="https://lineabase.co.cr" target="_blank" rel="noopener">lineabase.co.cr</a> — hosted on Hostinger, version-controlled on GitHub, built with AI assistance.</li>
+                    </ul>
+                </article>
+
+                <article class="timeline-item">
+                    <div class="timeline-head">
+                        <h3><span lang="es">Apoyo en proyectos de contratación pública (SICOP)</span><span lang="en">Support on public procurement projects (SICOP)</span></h3>
+                        <span class="timeline-date">2025 — 2026</span>
                     </div>
-                </div>
+                    <p class="timeline-org"><span lang="es">Asistencia a un socio comercial</span><span lang="en">Assisting a commercial partner</span></p>
+                    <ul class="timeline-list">
+                        <li lang="es">Asisto a mi socio —quien lidera esta actividad— en la ejecución de contratos adjudicados por el sistema SICOP del Gobierno de Costa Rica: apoyo en presupuestos, cronogramas y coordinación de proveedores.</li>
+                        <li lang="en">I assist my partner — who leads this work — in delivering contracts awarded through Costa Rica's SICOP government system: helping with budgets, schedules and vendor coordination.</li>
+                        <li lang="es">Soporte administrativo y de documentación durante las etapas de ejecución y entrega.</li>
+                        <li lang="en">Administrative and documentation support through the execution and handover stages.</li>
+                    </ul>
+                </article>
+
+                <article class="timeline-item">
+                    <div class="timeline-head">
+                        <h3><span lang="es">Asistente de Operaciones</span><span lang="en">Operations Assistant</span></h3>
+                        <span class="timeline-date">
+                            <span lang="es">Jul 2025 — Nov 2025</span><span lang="en">Jul 2025 — Nov 2025</span>
+                        </span>
+                    </div>
+                    <p class="timeline-org"><span lang="es">Equipos de Ordeño Luis Campos · Mantenimiento industrial · Zona Norte</span><span lang="en">Equipos de Ordeño Luis Campos · Industrial maintenance · Northern Costa Rica</span></p>
+                    <ul class="timeline-list">
+                        <li lang="es">Identificación y diagnóstico de debilidades operativas en los procesos internos de la empresa.</li>
+                        <li lang="en">Identified and diagnosed operational weaknesses in the company's internal processes.</li>
+                        <li lang="es">Diseño e implementación, por iniciativa propia, de un programa de capacitación al personal en buenas prácticas eléctricas, mecánicas y de seguridad industrial.</li>
+                        <li lang="en">Designed and ran, on my own initiative, a staff training program on electrical, mechanical and industrial-safety best practices.</li>
+                        <li lang="es">Optimización de flujos de trabajo mediante análisis de procesos en campo, con desplazamiento a sitio en entornos de alto riesgo.</li>
+                        <li lang="en">Optimized workflows through on-site process analysis, working in high-risk field environments.</li>
+                    </ul>
+                </article>
+
+                <article class="timeline-item">
+                    <div class="timeline-head">
+                        <h3><span lang="es">Project Manager — Proyectos Académicos y Profesionales</span><span lang="en">Project Manager — Academic & Professional Projects</span></h3>
+                        <span class="timeline-date">
+                            <span lang="es">2020 — Actual</span><span lang="en">2020 — Present</span>
+                        </span>
+                    </div>
+                    <p class="timeline-org">Tecnológico de Costa Rica</p>
+                    <ul class="timeline-list">
+                        <li lang="es">Gestión simultánea de múltiples proyectos técnicos y de documentación con equipos de 3 a 7 personas.</li>
+                        <li lang="en">Ran multiple technical and documentation projects in parallel, with teams of 3 to 7 people.</li>
+                        <li lang="es">Ciclo completo de gestión: análisis organizacional, levantamiento de requerimientos, gestión de riesgos, asignación de recursos, planificación y entrega formal.</li>
+                        <li lang="en">Full project lifecycle: organizational analysis, requirements gathering, risk management, resource allocation, planning and formal handover.</li>
+                        <li lang="es">Metodologías ágiles (Scrum) y tradicionales (cascada) según el proyecto; documentación profesional (casos de uso, planes, factibilidad, riesgos, presupuestos).</li>
+                        <li lang="en">Agile (Scrum) and traditional (waterfall) methods depending on the project; professional documentation (use cases, plans, feasibility, risk, budgets).</li>
+                        <li lang="es">Uso de Python, SQL, C#, Java, C++, Bash y Git/GitHub CLI en los proyectos de desarrollo.</li>
+                        <li lang="en">Used Python, SQL, C#, Java, C++, Bash and Git/GitHub CLI across development projects.</li>
+                    </ul>
+                </article>
+
+                <article class="timeline-item">
+                    <div class="timeline-head">
+                        <h3><span lang="es">Conductor Independiente</span><span lang="en">Independent Driver</span></h3>
+                        <span class="timeline-date">
+                            <span lang="es">Dic 2023 — Actual</span><span lang="en">Dec 2023 — Present</span>
+                        </span>
+                    </div>
+                    <p class="timeline-org">Uber &amp; Didi · <span lang="es">Gran Área Metropolitana</span><span lang="en">Greater Metropolitan Area, Costa Rica</span></p>
+                    <ul class="timeline-list">
+                        <li lang="es">Administración autónoma de un activo propio, con gestión independiente de horarios y costos.</li>
+                        <li lang="en">Autonomous management of my own asset, setting my own schedule and cost structure.</li>
+                        <li lang="es">Decisiones operativas basadas en análisis de datos de mercado: zonas de alta demanda, tendencias horarias y rutas óptimas.</li>
+                        <li lang="en">Operational decisions driven by market-data analysis: high-demand zones, time-of-day trends and optimal routing.</li>
+                    </ul>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="habilidades" class="skills">
+    <!-- Skills -->
+    <section id="habilidades" class="skills section">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Habilidades Técnicas</h2>
-                <p class="section-subtitle">Tecnologías y herramientas que manejo</p>
-            </div>
+            <header class="section-header">
+                <p class="section-kicker"><span lang="es">03 — Habilidades</span><span lang="en">03 — Skills</span></p>
+                <h2 class="section-title"><span lang="es">Con qué trabajo</span><span lang="en">What I work with</span></h2>
+            </header>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>Lenguajes de Programación</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">C#</span>
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">HTML/CSS</span>
-                        <span class="skill-tag">JavaScript</span>
-                    </div>
+                    <h3><span lang="es">Gestión de proyectos y procesos</span><span lang="en">Project &amp; process management</span></h3>
+                    <ul class="skill-tags">
+                        <li>Scrum</li><li>Kanban</li><li>Waterfall / PMI</li>
+                        <li><span lang="es">Ingeniería de requerimientos</span><span lang="en">Requirements engineering</span></li>
+                        <li><span lang="es">Gestión de riesgos</span><span lang="en">Risk management</span></li>
+                        <li><span lang="es">Presupuestos y recursos</span><span lang="en">Budgeting &amp; resourcing</span></li>
+                        <li>Jira</li>
+                    </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>Bases de Datos</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">MySQL</span>
-                        <span class="skill-tag">PostgreSQL</span>
-                        <span class="skill-tag">Diseño de BD</span>
-                        <span class="skill-tag">Optimización</span>
-                    </div>
+                    <h3><span lang="es">Desarrollo y programación</span><span lang="en">Development &amp; programming</span></h3>
+                    <ul class="skill-tags">
+                        <li>Python</li><li>SQL</li><li>C#</li><li>Java</li><li>C++</li><li>Bash</li>
+                        <li>HTML / CSS</li><li>JavaScript <span class="lvl">(<span lang="es">básico</span><span lang="en">basic</span>)</span></li>
+                        <li>Git / GitHub CLI</li><li>VS Code</li>
+                    </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>Áreas de Interés</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Big Data</span>
-                        <span class="skill-tag">Cloud Computing</span>
-                        <span class="skill-tag">Machine Learning</span>
-                        <span class="skill-tag">Data Analytics</span>
-                    </div>
+                    <h3><span lang="es">Datos y sistemas</span><span lang="en">Data &amp; systems</span></h3>
+                    <ul class="skill-tags">
+                        <li><span lang="es">Bases de datos relacionales</span><span lang="en">Relational databases</span></li>
+                        <li><span lang="es">Inteligencia de negocios</span><span lang="en">Business intelligence</span></li>
+                        <li><span lang="es">Analítica empresarial</span><span lang="en">Business analytics</span></li>
+                        <li>Power BI <span class="lvl">(<span lang="es">básico</span><span lang="en">basic</span>)</span></li>
+                        <li>Windows / Linux</li>
+                        <li><span lang="es">Fundamentos de redes</span><span lang="en">Networking fundamentals</span></li>
+                        <li><span lang="es">Seguridad en SI</span><span lang="en">Information security</span></li>
+                    </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>Herramientas</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">GitHub</span>
-                        <span class="skill-tag">VS Code</span>
-                        <span class="skill-tag">IntelliJ</span>
-                    </div>
+                    <h3><span lang="es">Negocio y estrategia</span><span lang="en">Business &amp; strategy</span></h3>
+                    <ul class="skill-tags">
+                        <li><span lang="es">Análisis de negocio</span><span lang="en">Business analysis</span></li>
+                        <li><span lang="es">Administración de procesos</span><span lang="en">Business process management</span></li>
+                        <li><span lang="es">Formulación y evaluación de proyectos</span><span lang="en">Project appraisal</span></li>
+                        <li><span lang="es">Planificación y presupuesto</span><span lang="en">Planning &amp; budgeting</span></li>
+                        <li><span lang="es">Mercadeo digital</span><span lang="en">Digital marketing</span></li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><span lang="es">Tecnologías emergentes</span><span lang="en">Emerging tech</span></h3>
+                    <ul class="skill-tags">
+                        <li><span lang="es">IA generativa y LLMs</span><span lang="en">Generative AI &amp; LLMs</span> <span class="lvl">(<span lang="es">uso diario</span><span lang="en">daily use</span>)</span></li>
+                        <li>Blockchain <span class="lvl">(<span lang="es">formación académica</span><span lang="en">coursework</span>)</span></li>
+                        <li>RPA <span class="lvl">(<span lang="es">en aprendizaje</span><span lang="en">learning</span>)</span></li>
+                        <li><span lang="es">Análisis y ciencia de datos</span><span lang="en">Data analysis &amp; data science</span> <span class="lvl">(Cisco MICITT-CECI)</span></li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><span lang="es">Herramientas y productividad</span><span lang="en">Tools &amp; productivity</span></h3>
+                    <ul class="skill-tags">
+                        <li>Microsoft Office <span class="lvl">(<span lang="es">avanzado</span><span lang="en">advanced</span>)</span></li>
+                        <li>Google Workspace</li><li>Jira</li><li>GitHub</li><li>Hostinger</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="proyectos" class="projects">
+    <!-- Projects -->
+    <section id="proyectos" class="projects section">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Proyectos Destacados</h2>
-                <p class="section-subtitle">Algunos de mis trabajos más relevantes</p>
-            </div>
+            <header class="section-header">
+                <p class="section-kicker"><span lang="es">04 — Proyectos</span><span lang="en">04 — Projects</span></p>
+                <h2 class="section-title"><span lang="es">Cosas que he construido</span><span lang="en">Things I've built</span></h2>
+            </header>
             <div class="projects-grid">
                 <article class="project-card">
-                    <div class="project-image">
-                        <span class="project-icon">💎</span>
-                    </div>
                     <div class="project-content">
-                        <h3>Taller Joyería Karina</h3>
-                        <p>Sistema de gestión para taller de reparaciones de joyería.
-                           Proyecto académico con enfoque en bases de datos.</p>
-                        <div class="project-tech">
-                            <span>Java</span>
-                            <span>SQL</span>
-                        </div>
-                        <a href="https://github.com/mochi00001/tallerJoyeriaKarina"
-                           target="_blank" class="project-link">
-                           Ver en GitHub →
+                        <h3>Línea Base Constructora</h3>
+                        <p lang="es">Sitio web corporativo diseñado, desarrollado e implementado de forma independiente. En producción con dominio propio.</p>
+                        <p lang="en">Company website designed, built and deployed independently. Live in production on its own domain.</p>
+                        <div class="project-tech"><span>HTML/CSS</span><span>JavaScript</span><span>Hostinger</span><span>Git</span></div>
+                        <a href="https://lineabase.co.cr" target="_blank" rel="noopener" class="project-link">
+                            <span lang="es">Visitar sitio</span><span lang="en">Visit site</span> <span aria-hidden="true">→</span>
                         </a>
                     </div>
                 </article>
 
                 <article class="project-card">
-                    <div class="project-image">
-                        <span class="project-icon">🌐</span>
-                    </div>
                     <div class="project-content">
-                        <h3>Tenders Website</h3>
-                        <p>Sitio web corporativo con información de la empresa,
-                           evidencias de trabajo e información de contacto.</p>
-                        <div class="project-tech">
-                            <span>HTML/CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <a href="https://github.com/mochi00001/tenders-website"
-                           target="_blank" class="project-link">
-                           Ver en GitHub →
+                        <h3><span lang="es">Portafolio de Ciencia de Datos</span><span lang="en">Data Science Portfolio</span></h3>
+                        <p lang="es">Documentación pública de laboratorios y proyectos del programa Cisco MICITT-CECI. En construcción activa conforme avanzan los cursos.</p>
+                        <p lang="en">Public documentation of labs and projects from the Cisco MICITT-CECI program. Actively growing as the courses progress.</p>
+                        <div class="project-tech"><span>Python</span><span>Data Analytics</span><span>GitHub Pages</span></div>
+                        <a href="https://mochi00001.github.io/Portafolio-Labs-Ciencia-de-Datos-MICITT/" target="_blank" rel="noopener" class="project-link">
+                            <span lang="es">Ver portafolio</span><span lang="en">View portfolio</span> <span aria-hidden="true">→</span>
                         </a>
                     </div>
                 </article>
 
                 <article class="project-card">
-                    <div class="project-image">
-                        <span class="project-icon">🏦</span>
-                    </div>
                     <div class="project-content">
                         <h3>CardlessBank</h3>
-                        <p>Aplicación bancaria sin tarjeta. Proyecto de Programación
-                           Orientada a Objetos con Java.</p>
-                        <div class="project-tech">
-                            <span>Java</span>
-                            <span>POO</span>
-                        </div>
-                        <a href="https://github.com/mochi00001/CardlessBank-PP2-POO"
-                           target="_blank" class="project-link">
-                           Ver en GitHub →
+                        <p lang="es">Aplicación bancaria sin tarjeta. Segundo proyecto del curso de Programación Orientada a Objetos (ATI-TEC).</p>
+                        <p lang="en">Cardless banking application. Second project for the Object-Oriented Programming course (IT Management, TEC).</p>
+                        <div class="project-tech"><span>Java</span><span>OOP</span></div>
+                        <a href="https://github.com/mochi00001/CardlessBank-PP2-POO" target="_blank" rel="noopener" class="project-link">
+                            <span lang="es">Ver en GitHub</span><span lang="en">View on GitHub</span> <span aria-hidden="true">→</span>
                         </a>
                     </div>
                 </article>
 
                 <article class="project-card">
-                    <div class="project-image">
-                        <span class="project-icon">🧙</span>
-                    </div>
                     <div class="project-content">
-                        <h3>Weasley Shop</h3>
-                        <p>Proyecto de bases de datos con temática del mundo mágico.
-                           Sistema de gestión de tienda.</p>
-                        <div class="project-tech">
-                            <span>SQL</span>
-                            <span>Python</span>
-                        </div>
-                        <a href="https://github.com/mochi00001/Weasley-shop"
-                           target="_blank" class="project-link">
-                           Ver en GitHub →
+                        <h3><span lang="es">Proyecto de Bases de Datos Avanzadas</span><span lang="en">Advanced Databases Project</span></h3>
+                        <p lang="es">Primer proyecto de programación del curso de Bases de Datos Avanzados: diseño de esquema, consultas y lógica de negocio.</p>
+                        <p lang="en">First programming project for the Advanced Databases course: schema design, queries and business logic.</p>
+                        <div class="project-tech"><span>Python</span><span>SQL</span></div>
+                        <a href="https://github.com/mochi00001/Proyecto1BDA" target="_blank" rel="noopener" class="project-link">
+                            <span lang="es">Ver en GitHub</span><span lang="en">View on GitHub</span> <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-content">
+                        <h3>Taller Joyería Karina</h3>
+                        <p lang="es">Sistema de gestión para un taller de reparación de joyería. Proyecto académico con enfoque en bases de datos.</p>
+                        <p lang="en">Management system for a jewelry repair shop. Academic project focused on databases.</p>
+                        <div class="project-tech"><span>SQL</span><span lang="es">Gestión</span><span lang="en">Management</span></div>
+                        <a href="https://github.com/mochi00001/tallerJoyeriaKarina" target="_blank" rel="noopener" class="project-link">
+                            <span lang="es">Ver en GitHub</span><span lang="en">View on GitHub</span> <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-content">
+                        <h3>Tenders Website</h3>
+                        <p lang="es">Sitio web corporativo con información de la empresa, evidencias de trabajo e información de contacto.</p>
+                        <p lang="en">Company website with business information, work evidence and contact details.</p>
+                        <div class="project-tech"><span>HTML/CSS</span><span>JavaScript</span></div>
+                        <a href="https://github.com/mochi00001/tenders-website" target="_blank" rel="noopener" class="project-link">
+                            <span lang="es">Ver en GitHub</span><span lang="en">View on GitHub</span> <span aria-hidden="true">→</span>
                         </a>
                     </div>
                 </article>
             </div>
+            <p class="projects-more">
+                <a href="https://github.com/mochi00001" target="_blank" rel="noopener">
+                    <span lang="es">Más en github.com/mochi00001</span><span lang="en">More at github.com/mochi00001</span> <span aria-hidden="true">→</span>
+                </a>
+            </p>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contacto" class="contact">
+    <!-- Education -->
+    <section id="formacion" class="education section">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Contacto</h2>
-                <p class="section-subtitle">¿Interesado en colaborar? ¡Hablemos!</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <span class="contact-icon">📧</span>
-                        <div>
-                            <h4>Email</h4>
-                            <a href="mailto:tu-email@example.com">tu-email@example.com</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <span class="contact-icon">💼</span>
-                        <div>
-                            <h4>LinkedIn</h4>
-                            <a href="#" target="_blank">linkedin.com/in/tu-perfil</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <span class="contact-icon">🐙</span>
-                        <div>
-                            <h4>GitHub</h4>
-                            <a href="https://github.com/mochi00001" target="_blank">
-                                github.com/mochi00001
-                            </a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <span class="contact-icon">📍</span>
-                        <div>
-                            <h4>Ubicación</h4>
-                            <span>Costa Rica</span>
-                        </div>
-                    </div>
+            <header class="section-header">
+                <p class="section-kicker"><span lang="es">05 — Formación</span><span lang="en">05 — Education</span></p>
+                <h2 class="section-title"><span lang="es">Estudios y certificaciones</span><span lang="en">Education &amp; certifications</span></h2>
+            </header>
+            <div class="edu-grid">
+                <div class="edu-col">
+                    <h3><span lang="es">Educación</span><span lang="en">Education</span></h3>
+                    <ul class="edu-list">
+                        <li>
+                            <span class="edu-year">2022 — 2027<span lang="es"> (est.)</span><span lang="en"> (est.)</span></span>
+                            <strong><span lang="es">Lic. en Administración de Tecnologías de Información</span><span lang="en">Lic. in Information Technology Management</span></strong>
+                            <span class="edu-place">Tecnológico de Costa Rica — <span lang="es">acreditada por SINAES · en curso</span><span lang="en">SINAES-accredited · in progress</span></span>
+                        </li>
+                        <li>
+                            <span class="edu-year">2019</span>
+                            <strong><span lang="es">Bachillerato Internacional</span><span lang="en">International Baccalaureate</span></strong>
+                            <span class="edu-place">Liceo San Carlos — Quesada, Alajuela</span>
+                        </li>
+                        <li>
+                            <span class="edu-year">2018</span>
+                            <strong>English Access Program</strong>
+                            <span class="edu-place"><span lang="es">Embajada de Estados Unidos</span><span lang="en">U.S. Embassy</span> — Santa Clara, Alajuela</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="edu-col">
+                    <h3><span lang="es">Certificaciones</span><span lang="en">Certifications</span></h3>
+                    <ul class="edu-list">
+                        <li>
+                            <span class="edu-year"><span lang="es">Jul 2026</span><span lang="en">Jul 2026</span></span>
+                            <strong><span lang="es">Fundamentos de Análisis de Datos</span><span lang="en">Data Analytics Essentials</span></strong>
+                            <span class="edu-place">Cisco Networking Academy · MICITT-CECI</span>
+                        </li>
+                        <li>
+                            <span class="edu-year"><span lang="es">Jun 2026</span><span lang="en">Jun 2026</span></span>
+                            <strong><span lang="es">Introducción a la Ciencia de Datos</span><span lang="en">Introduction to Data Science</span></strong>
+                            <span class="edu-place">Cisco Networking Academy · MICITT-CECI</span>
+                        </li>
+                        <li>
+                            <span class="edu-year"><span lang="es">May 2026</span><span lang="en">May 2026</span></span>
+                            <strong>English for IT 1</strong>
+                            <span class="edu-place">Cisco Networking Academy</span>
+                        </li>
+                        <li>
+                            <span class="edu-year"><span lang="es">Ene 2026</span><span lang="en">Jan 2026</span></span>
+                            <strong><span lang="es">Descubriendo el Emprendimiento</span><span lang="en">Discovering Entrepreneurship</span></strong>
+                            <span class="edu-place">Cisco Networking Academy · ATI-TEC</span>
+                        </li>
+                        <li>
+                            <span class="edu-year"><span lang="es">Nov 2024</span><span lang="en">Nov 2024</span></span>
+                            <strong><span lang="es">Habilidades Blandas y Liderazgo para la Transformación</span><span lang="en">Soft Skills &amp; Leadership for Transformation</span></strong>
+                            <span class="edu-place">Maxwell Leadership Foundation · Fundación Mejoremos Costa Rica · 15 h</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- Contact -->
+    <section id="contacto" class="contact section">
         <div class="container">
-            <p>&copy; 2025 Luis Madriz. Todos los derechos reservados.</p>
-            <p class="footer-credit">Desarrollado con ❤️ y mucho ☕</p>
+            <header class="section-header">
+                <p class="section-kicker"><span lang="es">06 — Contacto</span><span lang="en">06 — Contact</span></p>
+                <h2 class="section-title"><span lang="es">Conversemos</span><span lang="en">Let's talk</span></h2>
+                <p class="section-lead">
+                    <span lang="es">Estoy abierto a pasantías, prácticas y roles junior en gestión de proyectos, análisis de negocio, datos y desarrollo — remoto o presencial en Costa Rica. Puedo iniciar en 7 días.</span>
+                    <span lang="en">I'm open to internships, practicums and junior roles in project management, business analysis, data and development — remote or on-site in Costa Rica. I can start within 7 days.</span>
+                </p>
+            </header>
+            <div class="contact-grid">
+                <a class="contact-item" href="mailto:luismadriz9@gmail.com">
+                    <span class="contact-label">Email</span>
+                    <span class="contact-value">luismadriz9@gmail.com</span>
+                </a>
+                <a class="contact-item" href="https://www.linkedin.com/in/luismadriz13" target="_blank" rel="noopener">
+                    <span class="contact-label">LinkedIn</span>
+                    <span class="contact-value">in/luismadriz13</span>
+                </a>
+                <a class="contact-item" href="https://github.com/mochi00001" target="_blank" rel="noopener">
+                    <span class="contact-label">GitHub</span>
+                    <span class="contact-value">github.com/mochi00001</span>
+                </a>
+                <a class="contact-item" href="tel:+50689655235">
+                    <span class="contact-label"><span lang="es">Teléfono</span><span lang="en">Phone</span></span>
+                    <span class="contact-value">+506 8965 5235</span>
+                    <span class="contact-note"><span lang="es">L–V, 8:00–18:00 (UTC−6)</span><span lang="en">Mon–Fri, 8:00–18:00 (UTC−6)</span></span>
+                </a>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p>&copy; <span id="year">2026</span> Luis Steven Madriz Campos</p>
+            <p class="footer-note">
+                <span lang="es">Hecho con HTML, CSS y JavaScript · sin frameworks</span>
+                <span lang="en">Built with HTML, CSS and JavaScript · no frameworks</span>
+            </p>
         </div>
     </footer>
 
